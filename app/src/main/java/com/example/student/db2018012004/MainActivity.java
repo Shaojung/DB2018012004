@@ -19,6 +19,16 @@ public class MainActivity extends AppCompatActivity {
     }
     public void click1(View v)
     {
-        
+        String str = "";
+        if (chk1.isChecked())
+        {
+            str = str + "漢堡";
+        }
+        if (chk2.isChecked())
+        {
+            str = str + "可樂";
+        }
+        tv.setText(str);
+
     }
 }
