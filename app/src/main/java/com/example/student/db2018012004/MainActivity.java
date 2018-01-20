@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox chk1, chk2;
     TextView tv;
     RadioGroup rg;
-    ProgressBar pb;
+    ProgressBar pb, pb2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         tv = findViewById(R.id.textView);
         rg = findViewById(R.id.radioGroup);
         pb = findViewById(R.id.progressBar);
+        pb2 = findViewById(R.id.progressBar2);
     }
     public void click1(View v)
     {
@@ -56,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
     public void click3(View v)
     {
         pb.setVisibility(View.INVISIBLE);
+    }
+    public void click4(View v)
+    {
+        pb2.setProgress(pb2.getProgress() - 10);
+    }
+    public void click5(View v)
+    {
+        pb2.setProgress(pb2.getProgress() + 10);
     }
 
 }
