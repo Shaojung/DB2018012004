@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox chk1, chk2;
     TextView tv;
     RadioGroup rg;
+    ProgressBar pb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         chk2 = findViewById(R.id.checkBox2);
         tv = findViewById(R.id.textView);
         rg = findViewById(R.id.radioGroup);
+        pb = findViewById(R.id.progressBar);
     }
     public void click1(View v)
     {
@@ -46,4 +49,13 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(sb.toString());
 
     }
+    public void click2(View v)
+    {
+        pb.setVisibility(View.VISIBLE);
+    }
+    public void click3(View v)
+    {
+        pb.setVisibility(View.INVISIBLE);
+    }
+
 }
